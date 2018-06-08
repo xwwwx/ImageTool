@@ -3,22 +3,14 @@ import numpy as np
 class ImageTool:
 	def __init__(self):
 		pass
-	def Binarization(self,im):
+	def Binarization(self,im,th = None):
 		h,w = im.shape
-		sum = 0
-		for i in im:
-			for j in i:
-				sum += j
-		th = int(sum/(h*w))
-		for i in range(h):
-			for j in range(w):
-				if(im[i][j]>=th):
-					im[i][j] = 255
-				else:
-					im[i][j] = 0
-		return im
-	def Binarization(self,im,th):
-		h,w = im.shape
+		if(th == None):
+			sum = 0
+			for i in im:
+				for j in i:
+					sum += j
+			th = int(sum/(h*w))
 		for i in range(h):
 			for j in range(w):
 				if(im[i][j]>=th):

@@ -1,14 +1,11 @@
 # ImageTool
 影像處理工具
 
-Binarization(self,im)
-圖形二值化 閾值為平均灰階值
-im : 圖形灰階值二維ndarray
-return ndarray
 
-Binarization(self,im,th)
+
+Binarization(self,im,th = None)
 圖形二值化 
-th : 閾值
+th : 閾值 預設為灰階值平均
 im : 圖形灰階值二維ndarray
 return ndarray
 
